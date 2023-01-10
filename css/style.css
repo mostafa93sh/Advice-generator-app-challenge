@@ -1,0 +1,121 @@
+:root {
+  --light-cyan: hsl(193, 38%, 86%);
+  --neon-green: hsl(150, 100%, 66%);
+  --grayish-blue: hsl(217, 19%, 38%);
+  --dark-grayish-blue: hsl(217, 19%, 24%);
+  --dark-blue: hsl(218, 23%, 16%);
+}
+ul {
+  list-style: none;
+}
+img {
+  max-width: 100%;
+}
+body {
+  font-family: "Manrope", sans-serif;
+  font-size: 1.75rem;
+  color: var(--light-cyan);
+}
+
+.main-container {
+  background-color: var(--dark-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.main-container .card-container {
+  background-color: var(--dark-grayish-blue);
+  height: 350px;
+  width: 550px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 100px;
+  position: relative;
+}
+@media (max-width: 767px) {
+  .main-container .card-container {
+    width: 350px;
+    height: 250px;
+  }
+}
+
+.main-container .card-container::after:hover {
+  box-shadow: 0 0 15px var(--neon-green);
+}
+.main-container .card-container .advice-number {
+  color: var(--neon-green);
+  font-size: 0.51em;
+  font-weight: normal;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+.main-container .card-container .advice-content {
+  /* position: relative; */
+  font-size: 0.98em;
+  padding: 0;
+  text-align: center;
+  max-width: 410px;
+  line-height: 1.4;
+}
+/* .main-container .card-container .advice-content::after {
+  content: "\201C";
+  position: absolute;
+  top: 0;
+  left: -20px;
+  width: 35px;
+  height: 35px;
+} */
+
+.main-container .card-container .icon {
+  position: relative;
+}
+.main-container .card-container .icon::after,
+.main-container .card-container .icon::before {
+  content: "";
+  position: absolute;
+  top: 14px;
+  right: 30px;
+  height: 2px;
+  width: 212px;
+  background-color: var(--grayish-blue);
+}
+.main-container .card-container .icon::before {
+  left: 30px;
+}
+@media (max-width: 767px) {
+  .main-container .card-container .icon::after,
+  .main-container .card-container .icon::before {
+    width: 145px;
+  }
+}
+
+.main-container .card-container .green-circle .black {
+  color: black !important;
+  /* position: relative;
+  bottom: 0;
+  left: 15px;
+  transform: translate(50%, 50%); */
+}
+.main-container .card-container .green-circle {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background-color: var(--neon-green);
+  border-radius: 50%;
+  bottom: 0;
+  right: 50%;
+  z-index: 1;
+  transform: translate(50%, 50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-container .card-container .green-circle:hover {
+  box-shadow: 0 0 15px var(--neon-green);
+}
